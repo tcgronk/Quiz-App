@@ -1,0 +1,55 @@
+
+*{
+    display: flex;
+    flex-direction: column;
+}
+title {
+    display:none;
+}
+.fas,.fa-wine-glass-alt{
+
+   color:maroon;
+   font-size: 60px;
+    
+}
+main{
+    border: gray 3px solid;
+    height: 500px;
+    width: 90%;
+    border-radius: 3px;
+}
+.startButton {
+    background:navy;
+    color: white;
+    font-size: 28px;
+    
+}
+li{
+    flex-direction: row;
+    font-size: 26px;
+    align-self: center;
+}
+
+h2,h1,ul{
+   text-align: center;
+   margin-top: 5%;
+   
+}
+h2,h3,ul{
+    padding: 2%; 
+}
+
+h2{
+    font-size: 36px;
+}
+h3,main,button,.fas,.fa-wine-glass-alt,ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    display: hidden;
+}
+
+h1{
+    font-size: 50px;
+}
