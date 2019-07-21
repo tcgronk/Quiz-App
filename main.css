@@ -2,6 +2,7 @@
 *{
     display: flex;
     flex-direction: column;
+   
 }
 head {
     display:none;
@@ -9,31 +10,50 @@ head {
 .fas,.fa-wine-glass-alt{
 
    color:maroon;
-   font-size: 60px;
+   font-size: 80px;
     
 }
 main{
-    border: gray 3px solid;
+ 
     height: 500px;
     width: 90%;
-    border-radius: 3px;
+   
 }
-.startButton {
+
+heading{
+    width: 60%;
+    align-self: center;
+    
+ 
+}
+main,heading{
+    background: rgba(255, 255, 255, 0.699);
+    background-size: auto auto;
+    overflow: scroll;
+    border: gray 3px solid;
+    border-radius: 3px;
+    margin-bottom: 3%;
+}
+.startButton, .nextButton {
     background:navy;
     color: white;
     font-size: 28px;
-    
+}
+button{
+    width: 200px;
+    align-self: center;
 }
 li{
     flex-direction: row;
     font-size: 26px;
     align-self: center;
+    color:navy;
 }
 
 h2,h1,ul{
    text-align: center;
    margin-top: 5%;
-   
+   font-family: 'Playfair Display', serif;
 }
 h2,h3,ul{
     padding: 2%; 
@@ -42,7 +62,7 @@ h2,h3,ul{
 h2{
     font-size: 36px;
 }
-h3,main,button,.fas,.fa-wine-glass-alt,ul{
+h3,main,.startButton,.fas,.fa-wine-glass-alt,ul{
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,5 +71,43 @@ input{
 }
 
 h1{
-    font-size: 50px;
+    font-size: 80px;
+    color: navy;
+    display: inline-block;
 }
+/* 
+body{
+    background-image: url("berries-blur-blurry-39351.jpg");
+   
+    background-size: cover;
+} */
+#js-wine-form{
+    padding: 3%;
+  
+}
+.questionAnswerForm{
+    display: none;
+}
+
+@media screen and (max-width: 615px) {
+h1{
+    font-size: 60px;
+};
+}
+@media screen and (max-width: 498px) {
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 26px; 
+    }
+}
+
+    @media screen and (max-width: 298px) {
+        h1{
+            font-size: 18px;
+        };
+        li{
+        font-size: 20px;
+        }
+    }
