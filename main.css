@@ -9,7 +9,7 @@ head {
 }
 .fas,.fa-wine-glass-alt{
 
-   color:maroon;
+   /* color:maroon; */
    font-size: 80px;
     
 }
@@ -35,7 +35,7 @@ main,heading{
     margin-bottom: 3%;
 }
 .startButton, .nextButton {
-    background:navy;
+    /* background:navy; */
     color: white;
     font-size: 28px;
 }
@@ -47,7 +47,7 @@ li{
     flex-direction: row;
     font-size: 26px;
     align-self: center;
-    color:navy;
+    /* color:navy; */
 }
 
 h2,h1,ul{
@@ -72,7 +72,7 @@ input{
 
 h1{
     font-size: 80px;
-    color: navy;
+    /* color: navy; */
     display: inline-block;
 }
 /* 
