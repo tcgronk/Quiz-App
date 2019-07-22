@@ -7,9 +7,9 @@
 head {
     display:none;
 }
-.fas,.fa-wine-glass-alt{
+.fas,.fa-wine-glass-alt,.fa-award,.fa-question,.fa-glass-cheers,.fa-thumbs-up{
 
-   /* color:maroon; */
+   color:maroon;
    font-size: 80px;
     
 }
@@ -27,40 +27,44 @@ heading{
  
 }
 main,heading{
-    background: rgba(255, 255, 255, 0.699);
+    background: rgba(255, 255, 255, 0.877);
     background-size: auto auto;
     overflow: scroll;
     border: gray 3px solid;
     border-radius: 3px;
     margin-bottom: 3%;
 }
-.startButton, .nextButton {
-    /* background:navy; */
+.startButton, .nextButton, .restartButton, .submitButton {
+    background:navy;
     color: white;
     font-size: 28px;
 }
 button{
     width: 200px;
     align-self: center;
+    text-align: center;
 }
 li{
     flex-direction: row;
-    font-size: 26px;
+    font-size: 36px;
     align-self: center;
-    /* color:navy; */
+    color:navy;
+}
+.second-line{
+    display: block;
 }
 
 h2,h1,ul{
    text-align: center;
-   margin-top: 5%;
+   margin-top: 1%;
    font-family: 'Playfair Display', serif;
 }
 h2,h3,ul{
-    padding: 2%; 
+    padding: 1%; 
 }
 
-h2{
-    font-size: 36px;
+h2,.questionAnswerForm{
+    font-size: 28px;
 }
 h3,main,.startButton,.fas,.fa-wine-glass-alt,ul{
     margin-left: auto;
@@ -72,22 +76,51 @@ input{
 
 h1{
     font-size: 80px;
-    /* color: navy; */
+    color: navy;
     display: inline-block;
 }
-/* 
+
 body{
     background-image: url("berries-blur-blurry-39351.jpg");
    
     background-size: cover;
-} */
-#js-wine-form{
+}
+#js-wine-form,.questionAnswerForm{
     padding: 3%;
   
 }
 .questionAnswerForm{
     display: none;
+    align-self: center;
 }
+
+.startButton>h3{
+    margin-left: auto;
+    margin-right: auto;
+    width: 179px;
+}
+.animatedShake{
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.3s; 
+      
+        /* When the animation is finished, start again */
+        animation-iteration-count: 1; 
+}
+      
+@keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 
 @media screen and (max-width: 615px) {
 h1{
@@ -103,11 +136,11 @@ h1{
     }
 }
 
-    @media screen and (max-width: 298px) {
+@media screen and (max-width: 320px) {
         h1{
             font-size: 18px;
         };
         li{
         font-size: 20px;
         }
-    }
+}
