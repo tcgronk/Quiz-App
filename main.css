@@ -18,7 +18,7 @@ main{
  
     height: 500px;
     width: 90%;
-   
+
 }
 
 
@@ -86,7 +86,7 @@ h1{
 
 body{
     background-image: url("berries-blur-blurry-39351.jpg");
-   
+    
     background-size: cover;
 }
 #js-wine-form,.questionAnswerForm{
