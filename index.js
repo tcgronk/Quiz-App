@@ -13,7 +13,7 @@ function startQuiz(){
 
 function generateQuestion () {
   if (questionNumber < STORE.length) {
-    return `<div class="question-${questionNumber}">
+    return `<div class="question-${questionNumber}" id="questionNumber">
     <h2>${STORE[questionNumber].question}</h2>
     <form>
     <fieldset role="radiogroup">

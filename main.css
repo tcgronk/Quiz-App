@@ -2,8 +2,7 @@
 *{
     display: flex;
     flex-direction: column;
-    text-align: center;
-   
+    
 }
 head {
     display:none;
@@ -17,25 +16,28 @@ head {
 main{
  
     height: 500px;
-    width: 90%;
+    width: 85%;
 
 }
 
 
 heading{
-
     width: 60%;
     align-self: center;
 }
-input[type=radio] {
-    display: inline;
+
+heading, .intro, #questionNumber>h2, .results{
+    text-align: center;
 }
+
 
 main,heading{
     background: rgba(255, 255, 255, 0.877);
     background-size: auto auto;
     overflow: scroll;
+    
 }
+
 button,main,heading{
     border: rgba(128, 128, 128, 0.658) 3px solid;
     border-radius: 8px;
@@ -50,6 +52,9 @@ button {
     margin-right: auto;
     align-self: center;
 }
+input[type=radio] {
+    display: inline;
+}
 
 li{
     font-size: 36px;
@@ -60,17 +65,16 @@ li{
 }
 
 h2,h1,ul{
-   margin-top: 1%;
    font-family: 'Playfair Display', serif;
 }
-h2,h3,ul{
+h3,ul{
     padding: 1%; 
 }
 
 h2,.questionAnswerForm{
     font-size: 28px;
 }
-h3,main,.startButton,.fas,.fa-wine-glass-alt,ul{
+main,.startButton,.fas,.fa-wine-glass-alt{
     margin-left: auto;
     margin-right: auto;
 }
