@@ -85,7 +85,7 @@ const STORE= [
         answers: [
             "A. On its side",
             "B. Upright",
-            "C. It does not matter, as log as it is in a cool/dark place ",
+            "C. It does not matter, as long as it is in a cool/dark place ",
             "D. It depends on the type of wine"
         ],
         correctAnswer: "A. On its side"

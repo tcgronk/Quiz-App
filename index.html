@@ -13,26 +13,28 @@
         <script src="index.js"></script>
     </head>
     <body>
-        <heading role="banner">
-            <h1>Wine Education Quiz</h1>
-            <i class="fas fa-wine-glass-alt"></i>
+        <heading class= "banner" role="banner">
+            <h1><i class="fas fa-wine-glass-alt"></i>  Wine Education Quiz</h1>
+            
             <section class="scoreSection">
                   <ul>
-                      <li class="first-line">Question: <span class="questionNumber">0</span>/10</li>
-                      <li class="second-line">Score: <span class="score">  0</span></li>
+                      <li class="questionNumber"> 10 Questions</li>
+                      <li class="score"> Score: 0</li>
                   </ul>
             </section>
         </heading>
         <main>
             <section class="intro">
                 <p><h2>Are you a wine newbie or sommelier?</h2></p> 
-                <p><h2>Start here to test your wine education knowledge.</h2></p>
+                <p><h2>Click here to test your wine education knowledge.</h2></p>
             </section>
             <form id="js-wine-form">
                     <label for="wine-quiz"></label>
                     <button type="button" class="startButton"><h3>Start Here</h3></button>
             </form>
-            <div class="questionAnswerForm"></div>
+            <form class="questionAnswerForm">
+                <legend>Questions</legend>
+            </form>
         </main>
     </body>
 </html>

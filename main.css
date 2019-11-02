@@ -10,19 +10,25 @@ head {
 .fas,.fa-wine-glass-alt,.fa-award,.fa-question,.fa-glass-cheers,.fa-thumbs-up{
 
    color:maroon;
-   font-size: 80px;
-    
+   font-size: 36px;   
+}
+.banner>h1>i{
+    font-size: 36px;
 }
 main{
  
-    height: 500px;
-    width: 85%;
+    height: 400px;
+    width: 80%;
 
 }
 
 
+button:hover{
+    cursor: default;
+} 
+
 heading{
-    width: 60%;
+    width: 50%;
     align-self: center;
 }
 
@@ -34,20 +40,20 @@ heading, .intro, #questionNumber>h2, .results{
 main,heading{
     background: rgba(255, 255, 255, 0.877);
     background-size: auto auto;
-    overflow: scroll;
+    overflow: hidden;
     
 }
 
 button,main,heading{
     border: rgba(128, 128, 128, 0.658) 3px solid;
     border-radius: 8px;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 button {
-    margin-top: 15px;
+    margin-top: 10px;
     background:navy;
     color: white;
-    font-size: 28px;
+    font-size: 20px;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
@@ -57,11 +63,14 @@ input[type=radio] {
 }
 
 li{
-    font-size: 36px;
+    font-size: 26px;
     color:navy;
 }
 .second-line{
     display: block;
+}
+.intro>p{
+    margin: 1% 0 0 0;
 }
 
 h2,h1,ul{
@@ -72,7 +81,7 @@ h3,ul{
 }
 
 h2,.questionAnswerForm{
-    font-size: 28px;
+    font-size: 20px;
 }
 main,.startButton,.fas,.fa-wine-glass-alt{
     margin-left: auto;
@@ -83,23 +92,32 @@ input{
 }
 
 h1{
-    font-size: 80px;
+    font-size: 36px;
     color: navy;
     display: inline-block;
 }
 
 body{
-    background-image: url("berries-blur-blurry-39351.jpg");
-    
-    background-size: cover;
+    /* background-image: url("berries-blur-blurry-39351.jpg"); */
+    /* background-size: cover; */
+    background: rgb(72, 4, 53);
 }
+/* .banner{
+    background-image: url("berries-blur-blurry-39351.jpg"); 
+    background-size: 95% 100%
+    
+} */
+
 #js-wine-form,.questionAnswerForm{
-    padding: 3%;
+    padding: 1%;
   
 }
 .questionAnswerForm{
     display: none;
     align-self: center;
+}
+.results-correctFeedback, .correctFeedback{
+    text-align: center
 }
 
 
@@ -128,13 +146,13 @@ body{
 
 @media screen and (min-width: 499px) {
 h1{
-    font-size: 60px;
+    font-size: 40px;
 }
 
 }
 @media screen and (max-width: 498px) {
     h1{
-        font-size: 40px;
+        font-size: 30px;
     }
     h2{
         font-size: 26px; 
@@ -146,15 +164,18 @@ h1{
 }
 
 @media screen and (max-width: 320px) {
-        h1{
-            font-size: 18px;
-        };
-        li{
-        font-size: 20px;
-        }
+    h1{
+    font-size: 18px;
+    };
+    li{
+    font-size: 18px;
+    }
         
-        .second-line,.first-line{
-            font-size: 26px;
-        }
-        
+    .second-line,.first-line{
+    font-size: 18px;
+    }
+    .fas{
+    display: none;
+    }
+    
 }
