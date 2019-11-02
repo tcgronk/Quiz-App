@@ -28,8 +28,9 @@ button:hover{
 } 
 
 heading{
-    width: 50%;
+    width: 35%;
     align-self: center;
+    margin-top: 1%
 }
 
 heading, .intro, #questionNumber>h2, .results{
