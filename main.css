@@ -6,10 +6,26 @@
 }
 head {
     display:none;
+    flex-direction: row;
 }
+
+.scoreList{
+    justify-content: space-between;
+    color: white;
+    
+}
+.scoreSection{
+    
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 180px;
+    justify-content: space-between;
+}
+
 .fas,.fa-wine-glass-alt,.fa-award,.fa-question,.fa-glass-cheers,.fa-thumbs-up{
 
-   color:maroon;
+   color:#450802;
    font-size: 36px;   
 }
 .banner>h1>i{
@@ -21,52 +37,74 @@ main{
     width: 80%;
 
 }
-
-
+.banner{
+    width: 100%;
+   
+    
+}
+.title{
+    margin: 0;
+}
 button:hover{
     cursor: default;
 } 
 
-heading{
-    width: 35%;
-    align-self: center;
-    margin-top: 1%
-}
-
 heading, .intro, #questionNumber>h2, .results{
     text-align: center;
 }
+.startButton,.submitButton,.nextButton{
+    width: 100px;
+    text-align: center;
+    justify-content: last baseline;
+    margin-left: 0;
+    margin-right: 0
 
+}
+.startButton>h3,.submitButton>h3,.restartButton>h3,.nextButton>h3{
+    width: 100%;
+    margin:0 auto;
+}
+.correctFeedback{
+    max-width: 650px;
+    height: 400px;
+}
 
-main,heading{
-    background: rgba(255, 255, 255, 0.877);
-    background-size: auto auto;
+.banner{
+    background: #067546;
+    background-size: auto;
     overflow: hidden;
     
+    
+}
+main{
+margin-top: 25px;
+background-color: white;
+max-width: 650px;
 }
 
-button,main,heading{
-    border: rgba(128, 128, 128, 0.658) 3px solid;
+button{
+    border: #067546 4px solid;
+    margin: 5%;
+}
+button{
     border-radius: 8px;
-    margin-bottom: 2%;
+
 }
 button {
-    margin-top: 10px;
-    background:navy;
+    background:#00245E;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    height:39px;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
 }
-input[type=radio] {
-    display: inline;
+.answerOption{
+    flex-direction: row;
+    align-content: center;
+   
 }
 
-li{
-    font-size: 26px;
-    color:navy;
-}
 .second-line{
     display: block;
 }
@@ -74,7 +112,7 @@ li{
     margin: 1% 0 0 0;
 }
 
-h2,h1,ul{
+*{
    font-family: 'Playfair Display', serif;
 }
 h3,ul{
@@ -83,31 +121,36 @@ h3,ul{
 
 h2,.questionAnswerForm{
     font-size: 20px;
+    color: #0F3161
 }
-main,.startButton,.fas,.fa-wine-glass-alt{
+main,.startButton,.submitButton,.fas,.fa-wine-glass-alt{
     margin-left: auto;
     margin-right: auto;
+}
+fieldset{
+    border: none
 }
 input{
     display: hidden;
 }
 
 h1{
-    font-size: 36px;
-    color: navy;
+    color: white;
     display: inline-block;
 }
 
 body{
-    /* background-image: url("berries-blur-blurry-39351.jpg"); */
-    /* background-size: cover; */
-    background: rgb(72, 4, 53);
-}
-/* .banner{
     background-image: url("berries-blur-blurry-39351.jpg"); 
-    background-size: 95% 100%
+    background-size: cover; 
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+heading{
+    height: 125px;
     
-} */
+}
+
 
 #js-wine-form,.questionAnswerForm{
     padding: 1%;
@@ -118,7 +161,8 @@ body{
     align-self: center;
 }
 .results-correctFeedback, .correctFeedback{
-    text-align: center
+    text-align: center;
+
 }
 
 
@@ -156,12 +200,14 @@ h1{
         font-size: 30px;
     }
     h2{
-        font-size: 26px; 
+        font-size: 16px; 
     }
     input[type=radio]{
         padding: 5px; 
     }
-
+    .questionAnswerForm,.answerOption{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -179,4 +225,15 @@ h1{
     display: none;
     }
     
+}
+
+@media screen and (min-width: 750px) {
+    .scoreSection{
+        position: absolute;
+        top:0;
+    }
+    heading{
+        height: 65px;
+        
+    }
 }

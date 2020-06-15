@@ -21,20 +21,20 @@ function generateQuestion () {
     <form>
     <fieldset role="radiogroup">
     <label class="answerOption">
-    <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[0]}</span>
+    <input class='option' type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
+    ${STORE[questionNumber].answers[0]}
     </label>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[1]}</span>
+    ${STORE[questionNumber].answers[1]}
     </label>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[2]}</span>
+    ${STORE[questionNumber].answers[2]}
     </label>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[3]}</span>
+    ${STORE[questionNumber].answers[3]}
     </label>
     <button type="submit" class="submitButton"><h3>Submit</h3></button>
     </fieldset>
@@ -54,13 +54,12 @@ function changeQuestionNumber () {
 
   $('.questionNumber').text(`Question: ${questionNumber+1} of 10`);
 }
-// removed due to app rubric 
-// function lessQuestionNumber () {
-//     if(questionNumber!=0){
-//       questionNumber --;
-//     $('.questionNumber').text(questionNumber);
-//     }
-// }
+function lessQuestionNumber () {
+    if(questionNumber!=0){
+      questionNumber --;
+    $('.questionNumber').text(questionNumber);
+    }
+}
 
 function changeScore () {
   score ++;
@@ -107,7 +106,7 @@ function ifAnswerIsWrong () {
 }
 
 function userAnswerFeedbackCorrect () {
-  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><i class="fas fa-wine-glass-alt"></i></div><p><b>You got it right!</b></p><button type=button class="nextButton"><h3>Next</h3></button></div>`);
+  $('.questionAnswerForm').html(`<div class="correctFeedback"><div><i  class="fas fa-wine-glass-alt"></i></div><p><b>You got it right!</b></p><button type=button class="nextButton"><h3>Next</h3></button></div>`);
 }
 
 function userAnswerFeedbackWrong () {
@@ -143,19 +142,28 @@ function renderNextQuestion () {
   });
 }
 
-//removed due to app rubric
-// function renderPreviousQuestion(){
-// $("main").on("click",".backButton",function(event){
-//    // lessQuestionNumber();
-//     renderQuestion();
-//     userSelectAnswer();
+function renderPreviousQuestion(){
+$("main").on("click",".backButton",function(event){
+   lessQuestionNumber();
+    renderQuestion();
+    userSelectAnswer();
 
-// });
-// }
+});
+}
 
 //restart quiz function - reloads page to start quiz over
 function restartQuiz () {
   $('main').on('click', '.restartButton', function (event) {
+    score=0;
+    questionNumber=0;
+    $(".questionNumber").text(`10 Questions`);
+    $(".score").text(`Score: 0`);
+    $(".questionAnswerForm").css('display', 'none');
+    $(".startButton").css('display', 'flex');
+    $(".intro").css('display', 'flex');
+    
+  });
+  $(".title").click(function (event) {
     score=0;
     questionNumber=0;
     $(".questionNumber").text(`10 Questions`);
@@ -173,10 +181,9 @@ function createQuiz () {
     userSelectAnswer();
     renderNextQuestion();
     restartQuiz();
-    // renderPreviousQuestion();
+    renderPreviousQuestion();
   }
   
   $(createQuiz);
   
 
-  //why can i not restart once i press submit
