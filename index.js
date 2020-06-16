@@ -1,5 +1,6 @@
 let questionNumber = 0;
 let score = 0;
+let percent=0
 
 function startQuiz(){
  
@@ -62,7 +63,9 @@ function lessQuestionNumber () {
 }
 
 function changeScore () {
-  score ++;
+  score++
+  percent = (score/10)*100
+
 }
 
 
@@ -80,15 +83,12 @@ function userSelectAnswer () {
     let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     
     if (answer === correctAnswer) {
-      console.log(true)
       selected.parent().addClass('correct');
       ifAnswerIsCorrect();
     } 
     else if(answer===undefined){
-      console.log(undefined)
     }
     else  {
-      console.log(false)
       selected.parent().addClass('wrong');
       ifAnswerIsWrong();
     }
@@ -117,7 +117,7 @@ function userAnswerFeedbackWrong () {
 
 function updateScore () {
   changeScore();
-  $('.score').text(`Score: ${score}`);
+  $('.score').text(`Score: ${percent}%`);
 }
 
 function renderResults () {
