@@ -175,6 +175,30 @@ function restartQuiz () {
   });
 }
 
+function wineQuotes(){
+ let quotes=[`“Life is too short to drink bad wine.”
+
+  ― Anonymous`, `“Age is just a number. It’s totally irrelevant unless, of course, you happen to be a bottle of wine.”
+
+ ― Joan Collins`,`"The discovery of a wine is of greater moment than 
+ the discovery of a constellation. The universe is too full of stars.”― 
+ Benjamin Franklin, circa 1700s`]
+
+ let counter =0
+
+ function change(){
+   $('.wine-quotes').text(`${quotes[counter]}`)
+   counter++
+ if(counter>=quotes.length){
+   counter =0 
+ }
+}
+
+ setInterval(() => {
+  change()
+ }, 5000);
+}
+
 function createQuiz () {
     startQuiz();
     renderQuestion();
@@ -185,5 +209,6 @@ function createQuiz () {
   }
   
   $(createQuiz);
+  $(wineQuotes);
   
 

@@ -7,7 +7,13 @@
 head {
     display:none;
     flex-direction: row;
+
 }
+heading{
+    height: 200px;
+    overflow: hidden;
+}
+
 
 .scoreList{
     justify-content: space-between;
@@ -32,8 +38,7 @@ head {
     font-size: 36px;
 }
 main{
- 
-    height: 400px;
+
     width: 80%;
 
 }
@@ -42,6 +47,27 @@ main{
    
     
 }
+.banner-image{
+width: 100%;
+padding: 0; 
+margin:0;
+height: 500px 
+}
+.bottom-banner{
+    margin: 5% auto 5% auto;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+.wine-quotes{
+    max-width: 250px;
+    margin: 50px auto;
+}
+.image-bottom{
+    max-width: 320px;
+    margin: 0 auto;
+}
+
 .title{
     margin: 0;
 }
@@ -71,17 +97,24 @@ heading, .intro, #questionNumber>h2, .results{
 
 .banner{
     background: #067546;
-    background-size: auto;
-    overflow: hidden;
-    
-    
+    max-height: 125px;
 }
 main{
-margin-top: 25px;
 background-color: white;
-max-width: 650px;
+width: 100%;
+display: flex;
+flex-direction: column;
 }
-
+.main-quiz{
+    width: 70%;
+    height: 350px;
+    overflow: hidden;
+    margin: -450px auto;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.937);
+    border: solid 2px #00245E;
+    padding: 20px
+}
 button{
     border: #067546 4px solid;
     margin: 5%;
@@ -140,15 +173,10 @@ h1{
 }
 
 body{
-    background-image: url("berries-blur-blurry-39351.jpg"); 
-    background-size: cover; 
-    height: 100vh;
-    background-repeat: no-repeat;
+
     margin: 0;
-}
-heading{
-    height: 125px;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -193,6 +221,13 @@ heading{
 h1{
     font-size: 40px;
 }
+.bottom-banner{
+    margin-top: 570px;
+}
+.main-quiz{
+    width: 65%;
+    height: 300px;
+}
 
 }
 @media screen and (max-width: 498px) {
@@ -207,6 +242,13 @@ h1{
     }
     .questionAnswerForm,.answerOption{
         font-size: 14px;
+    }
+    .bottom-banner{
+        margin-top: 575px;
+    }
+    .main-quiz{
+        width: 65%;
+        height: 300px;
     }
 }
 
@@ -224,7 +266,9 @@ h1{
     .fas{
     display: none;
     }
-    
+    .bottom-banner{
+        margin-top: 600px
+    }
 }
 
 @media screen and (min-width: 750px) {
@@ -235,5 +279,8 @@ h1{
     heading{
         height: 65px;
         
+    }
+    .bottom-banner{
+        flex-direction: row;
     }
 }
